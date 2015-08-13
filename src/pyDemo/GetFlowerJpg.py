@@ -20,7 +20,7 @@ def get_huaban_boards():
     pin_id = 443944443
     limit = 20 #他默认允许的limit为100
     while pin_id != None:
-        url = 'http://huaban.com/boards/花板编号（链接里有的）/?max=' + str(pin_id) + '&limit=' + str(limit) + '&wfl=1'
+        url = 'http://huaban.com/boards/画板编号（链接里有的）/?max=' + str(pin_id) + '&limit=' + str(limit) + '&wfl=1'
         try:
             i_headers = {"User-Agent": "Mozilla/5.0(Windows; U; Windows NT 5.1; zh-CN; rv:1.9.1)\
             Gecko/20090624 Firefox/3.5", \
