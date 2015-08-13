@@ -2,6 +2,11 @@
 # -*- encoding:utf-8 -*-
 # author :insun
 #http://yxmhero1989.blog.163.com/blog/static/112157956201311994027168/
+
+'''
+下载花瓣下的某一个画板的图片
+'''
+
 import urllib, urllib2, re, sys, os
 reload(sys)
  
@@ -15,7 +20,7 @@ def get_huaban_boards():
     pin_id = 443944443
     limit = 20 #他默认允许的limit为100
     while pin_id != None:
-        url = 'http://huaban.com/boards/19215080/?max=' + str(pin_id) + '&limit=' + str(limit) + '&wfl=1'
+        url = 'http://huaban.com/boards/画板数/?max=' + str(pin_id) + '&limit=' + str(limit) + '&wfl=1'
         try:
             i_headers = {"User-Agent": "Mozilla/5.0(Windows; U; Windows NT 5.1; zh-CN; rv:1.9.1)\
             Gecko/20090624 Firefox/3.5", \
