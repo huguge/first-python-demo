@@ -2,11 +2,12 @@
 '''
 Created on 2015年8月13日
 
-@author: 80s
+利用用户对电影的评价来推断用户之间的相似度
 '''
 
 from math import sqrt
 
+# 用户对电影的评论分数
 critics = {'Lisa Rose':{'Lady in the Water':2.5, 'Snakes on a Plane':3.5, 'Just My Luck':3.0, 'Superman returns':3.5,
     'You, Me and Dupree':2.5, 'The Night Listener':3.0},
 'Gene Seymour':{'Lady in the Water':3.0, 'Snakes on a Plane':3.5, 'Just My Luck':1.5, 'Superman returns':5.0,
@@ -37,4 +38,5 @@ def sim_distance(prefs,person1,person2):
                         for item in prefs[person1] if item in prefs[person2]])
     return 1/(1+sqrt(sum_of_squares))
 
+# 输出两个用户的相似度，越接近  1 则越相似
 print sim_distance(critics, 'Lisa Rose', 'Gene Seymour')
