@@ -2,6 +2,10 @@
 import re
 import urllib
 
+'''
+下载贴吧中某一个网页下的图片
+'''
+
 def getHtml(url):
     page = urllib.urlopen(url)
     html = page.read()
