@@ -2,24 +2,24 @@
 '''
 Created on 2015年8月13日
 
-利用用户对电影的评价来推断用户之间的相似度
+利用用户对电影的评价来推断两个用户之间的相似度
 '''
 
 from math import sqrt
 
 # 用户对电影的评论分数
 critics = {'Lisa Rose':{'Lady in the Water':2.5, 'Snakes on a Plane':3.5, 'Just My Luck':3.0, 'Superman returns':3.5,
-    'You, Me and Dupree':2.5, 'The Night Listener':3.0},
-'Gene Seymour':{'Lady in the Water':3.0, 'Snakes on a Plane':3.5, 'Just My Luck':1.5, 'Superman returns':5.0,
-    'The Night Listener':3.0, 'You, Me and Dupree':3.5},
- 'Michael Phillips':{'Lady in the Water':2.5, 'Snakes on a Plane':3.0, 'Superman returns':3.5, 'The Night Listener':4.0},
-'Claudia Puig':{'Snakes on a Plane':3.5, 'Just My Luck':3.0, 'The Night Listener':4.5, 'Superman returns':4.0,
-    'You, Me and Dupree':2.5},
-'Mick Lasalle':{'Lady in the Water':3.0, 'Snakes on a Plane':4.0, 'Just My Luck':2.0, 'Superman returns':3.0, 'The Night Listener':3.0,
-    'You, Me and Dupree':2.0},
-'Jack Matthews':{'Lady in the Water':3.0, 'Snakes on a Plane':4.0, 'The Night Listener':3.0, 'Superman returns':5.0,
-    'You, Me and Dupree':3.5},
-'Toby':{'Snakes on a Plane':4.5, 'You, Me and Dupree':1.0, 'Superman returns':4.0}        
+                        'You, Me and Dupree':2.5, 'The Night Listener':3.0},
+           'Gene Seymour':{'Lady in the Water':3.0, 'Snakes on a Plane':3.5, 'Just My Luck':1.5, 'Superman returns':5.0,
+                'The Night Listener':3.0, 'You, Me and Dupree':3.5},
+           'Michael Phillips':{'Lady in the Water':2.5, 'Snakes on a Plane':3.0, 'Superman returns':3.5, 'The Night Listener':4.0},
+           'Claudia Puig':{'Snakes on a Plane':3.5, 'Just My Luck':3.0, 'The Night Listener':4.5, 'Superman returns':4.0,
+                'You, Me and Dupree':2.5},
+           'Mick Lasalle':{'Lady in the Water':3.0, 'Snakes on a Plane':4.0, 'Just My Luck':2.0, 'Superman returns':3.0, 'The Night Listener':3.0,
+                'You, Me and Dupree':2.0},
+           'Jack Matthews':{'Lady in the Water':3.0, 'Snakes on a Plane':4.0, 'The Night Listener':3.0, 'Superman returns':5.0,
+                 'You, Me and Dupree':3.5},
+           'Toby':{'Snakes on a Plane':4.5, 'You, Me and Dupree':1.0, 'Superman returns':4.0}        
          }
 
 # 返回一个有关 person1 与 person2 的基于距离的相似度评价
